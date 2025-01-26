@@ -11,14 +11,6 @@ export default function Button() {
         return () => clearInterval(timer);
     });
 
-    useEffect(() => {
-        const resetTimer = setInterval(() => {
-            setTimeElapsed(0);
-        }, 5000);
-
-        return () => clearInterval(resetTimer);
-    })
-
     const handleClick = () => {
         setCount(count + 1);
         setTimeElapsed(0);
